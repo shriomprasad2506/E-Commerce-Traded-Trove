@@ -1,0 +1,29 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "E-commerce Platform built with the MERN Stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
+}
